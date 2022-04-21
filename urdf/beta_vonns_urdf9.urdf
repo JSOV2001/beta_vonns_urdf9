@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="beta_vonns_urdf9">
+  <link name = "world"/>
+  
+  <joint name= "fixed" type = "fixed">
+  	<parent link= "world"/>
+  	<child link = "base_link"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin 
+        xyz="0.0 0.0 0.0" 
+        rpy="0 0 0" />
+      <mass
+        value="0.15784" />
+      <inertia
+        ixx="0.00011413"
+        ixy="2.5522E-09"
+        ixz="1.6493E-07"
+        iyy="0.00022363"
+        iyz="3.5006E-08"
+        izz="0.00020611" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_vonns_urdf9/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_vonns_urdf9/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="3.6118E-05 0.030322 0.02442"
+        rpy="0 0 0" />
+      <mass
+        value="0.22435" />
+      <inertia
+        ixx="0.00021629"
+        ixy="-4.2837E-07"
+        ixz="-5.9888E-07"
+        iyy="0.00046096"
+        iyz="-9.6023E-09"
+        izz="0.00025405" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_vonns_urdf9/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://beta_vonns_urdf9/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0.074866 0 0.11468"
+      rpy="1.5708 -0.066901 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      upper="0"
+      effort="1"
+      velocity="100" />
+  </joint>
+</robot>
